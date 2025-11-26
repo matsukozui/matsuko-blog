@@ -5,7 +5,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'Matsuko',
   tagline: '麻糬子的 blog',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/matsuko_favicon.ico',
 
   // 為未來 v4 提前開啟相容模式
   future: {
@@ -42,6 +42,10 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+
+           blogSidebarTitle: '所有貼文',  // ← 將 "Recent posts" 改成你想要的文字
+        blogSidebarCount: 'ALL',       // ← 顯示所有文章（或改成數字，如 10）
+      
           feedOptions: { type: ['rss', 'atom'], xslt: true },
           // 若不需要「在 GitHub 編輯此頁」，可刪除此行
           // editUrl: 'https://github.com/matsukozui/matsuko-blog/tree/main/',
@@ -59,19 +63,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/icon.png',
       colorMode: { respectPrefersColorScheme: true },
 
       navbar: {
         title: 'Matsuko',
-        logo: { alt: 'Matsuko Logo', src: 'img/logo.svg' },
+        logo: { alt: 'Matsuko Logo', src: 'img/matsuko_favicon.ico' },
         items: [
-          { to: '/blog', label: '部落格', position: 'left' },
-          {
-            href: 'https://github.com/matsukozui/matsuko-blog',
-            label: 'GitHub',
-            position: 'right',
-          },
+          { to: '/blog', label: '貼文', position: 'left' },
+          { to: '/about', label: '關於我', position: 'left' },
         ],
       },
 
@@ -79,22 +79,14 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: '導覽',
-            items: [{ label: '部落格', to: '/blog' }],
-          },
-          {
-            title: '社群',
-            items: [
-              { label: 'Discord', href: 'https://discordapp.com/invite/docusaurus' },
-              { label: 'Stack Overflow', href: 'https://stackoverflow.com/questions/tagged/docusaurus' },
-              { label: 'X', href: 'https://x.com/docusaurus' },
+            title: '部落格',
+            items: [{ label: '貼文', to: '/blog' },
+               { label: '關於我', to: '/about' },
             ],
           },
+          
           {
-            title: '原始碼',
-            items: [
-              { label: 'GitHub', href: 'https://github.com/matsukozui/matsuko-blog' },
-            ],
+           
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Matsuko. Built with Docusaurus.`,
