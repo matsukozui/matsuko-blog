@@ -7,7 +7,7 @@
   --ifm-color-primary-lighter: #000000;
 
   --ifm-navbar-background-color: #ffffff; /* 導覽列背景 */
-  --ifm-link-color: var(--ifm-color-primary);
+   --ifm-link-color: #1e4ed8;        /* 深墨綠 */
 }
 
 /* ===== Dark 模式色系 ===== */
@@ -19,7 +19,7 @@ html[data-theme='dark'] {
   --ifm-color-primary-lighter: #ffffff;
 
   --ifm-navbar-background-color: #0b1220;
-  --ifm-link-color: var(--ifm-color-primary);
+ --ifm-link-color: #6ee7b7;        /* 淡綠 */
 }
 
 
